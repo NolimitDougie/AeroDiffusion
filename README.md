@@ -1,11 +1,14 @@
 # AeroDiffusion: Complex Aerial Image Synthesis with Keypoint-Aware Text Descriptions and Feature-Augmented Diffusion Models
 
 
-
+---
 
 
 
 ## Environment
+
+Follow the steps below to create and activate the AeroDiffusion environment:
+
 ```shell
 conda create -n aerodiff python=3.11
 conda activate aerodiff
@@ -15,8 +18,9 @@ cd AeroDiffusion
 pip install -r requirements.txt
 ```
 
-##  Training Object Detection Model
+##  Training the Object Detection Model
 ```shell
+cd yolov5
 python train.py --img 640 --batch 16 --epochs 100 --data visdrone.yaml --weights yolov5s.pt --project visdrone-results --name yolov5-visdrone
 ```
 ## Configuration for Aero Diffusionn
