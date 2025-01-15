@@ -19,6 +19,9 @@ pip install -r requirements.txt
 ```shell
 python train.py --img 640 --batch 16 --epochs 100 --data visdrone.yaml --weights yolov5s.pt --project visdrone-results --name yolov5-visdrone
 ```
+## Configuration for Aero Diffusion 
+Add the trained object detection model to [Link Text](yolov5/region.py)
+
 
 
 
