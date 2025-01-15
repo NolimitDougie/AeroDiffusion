@@ -5,9 +5,6 @@
 
 
 
-
-
-
 ## Environment
 ```shell
 conda create -n aerodiff python=3.11
