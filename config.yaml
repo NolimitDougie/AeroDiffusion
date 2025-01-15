@@ -1,0 +1,44 @@
+# AeroDiffusion Configuration File
+mode: train # train test
+gpu_ids: [6] # Sampling only supports one gpu.
+batch_size: 1
+num_workers: 4
+num_cpu_cores: -1
+seed: 0
+ckpt_dir: checkpoint
+run_name: trainImage
+task: visualization
+
+
+# train
+image_size: 512
+init_lr: 1e-5 # initial learning rate
+warmup_epochs: 1 # warmup epochs
+max_epochs: 50  # max epochs
+train_model_file:  # model file for resume, none for train from scratch
+freeze_clip: False  # whether to freeze clip
+freeze_blip: True # whether to freeze blip
+freeze_resnet: True
+
+
+# test
+test_model_file: checkpoint_files/trainImage/last.ckpt # Load the models check point file here
+scheduler: ddim  # ddim ddpm
+guidance_scale: 7.0  # guidance scale
+num_inference_steps: 250 # number of inference steps
+sample_output_dir: trainImage004 # output directory to save the generated images
+
+# Dataset
+VisDrone:
+  max_length: 200
+  new_tokens: ['pedestrian', 'people', 'bicycles', 'cars', 'vans', 'trucks', 'tricycles', 'awning-tricycle', 'bus', 'motors', 'nighttime', 'daytime']
+  clip_embedding_tokens: 60000
+  blip_embedding_tokens: 50000
+
+# Hydra
+hydra:
+  run:
+    dir: .
+  output_subdir: null
+hydra/job_logging: disabled
+hydra/hydra_logging: disabled

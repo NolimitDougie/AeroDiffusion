@@ -15,7 +15,7 @@ from omegaconf import DictConfig
 import pytorch_lightning as pl
 from diffusers.optimization import get_cosine_schedule_with_warmup
 
-from region_transformer import RegionTransformer
+from reigon_level.region_transformer import RegionTransformer
 
 
 class DiffusionModel(pl.LightningModule):

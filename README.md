@@ -1,4 +1,4 @@
-# AeroDiffusion
+# AeroDiffusion: Complex Aerial Image Synthesis with Keypoint-Aware Text Descriptions and Feature-Augmented Diffusion Models
 
 
 
@@ -19,9 +19,16 @@ pip install -r requirements.txt
 ```shell
 python train.py --img 640 --batch 16 --epochs 100 --data visdrone.yaml --weights yolov5s.pt --project visdrone-results --name yolov5-visdrone
 ```
-## Configuration for Aero Diffusion 
-Add the trained checkpoint file from yolov5 to [Link Text](yolov5/region.py)
+## Configuration for Aero Diffusionn
+To integrate the trained YOLOv5 model into the AeroDiffusion pipeline:
 
+1. **Locate the Trained Checkpoint**  
+   Find the trained checkpoint file (e.g., `best.pt`) in the specified training directory (e.g., `visdrone-results/yolov5-visdrone`).
+
+2. **Add the Checkpoint File**  
+   Update the [yolov5/region.py](yolov5/region.py) file to reference the trained checkpoint file.
+
+By completing these steps, the AeroDiffusion framework will effectively utilize the YOLOv5-trained model for object detection.
 
 
 ## Data Preparation
