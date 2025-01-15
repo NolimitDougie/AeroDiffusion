@@ -15,6 +15,12 @@ cd AeroDiffusion
 pip install -r requirements.txt
 ```
 
+##  Training Object Detection Model
+```shell
+python train.py --img 640 --batch 16 --epochs 100 --data visdrone.yaml --weights yolov5s.pt --project visdrone-results --name yolov5-visdrone
+```
+
+
 
 
 ## Data Preparation
