@@ -84,3 +84,15 @@
 [//]: # (python main.py)
 
 [//]: # (```)
+
+
+## Citation
+If you find this dataset useful for your research, please cite our paper:
+```bibtex
+@inproceedings{6688,
+  title={AeroDiffusion: Complex Aerial Image Synthesis with Keypoint-Aware Text Descriptions and Feature-Augmented Diffusion Models},
+  author={Townsell, Douglas and Xie, Mimi and Wang, Bin and Amsaad, Fathi and Thanam, Varshitha Reddy and Zhang, Wen},
+  booktitle={2025 Design, Automation \& Test in Europe Conference \& Exhibition (DATE)},
+  organization={IEEE}
+}
+```
